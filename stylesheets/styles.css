@@ -110,7 +110,7 @@ header {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
-header ul {
+header ul.Downloads {
   list-style:none;
   height:40px;
   padding:0;
@@ -120,18 +120,23 @@ header ul {
   width:270px;
 }
 
-header li {
+header ul.Intro {
+  padding-inline-start: 10px;
+
+}
+
+header li.Downloads {
   width:89px;
   float:left;
   border-right:1px solid #e0e0e0;
   height:40px;
 }
 
-header li:first-child a {
+header li.Downloads:first-child a {
   border-radius:5px 0 0 5px;
 }
 
-header li:last-child a {
+header li.Downloads:last-child a {
   border-radius:0 5px 5px 0;
 }
 
@@ -158,10 +163,7 @@ strong {
   font-weight:500;
 }
 
-header ul li + li + li {
-  border-right:none;
-  width:89px;
-}
+
 
 header ul a strong {
   font-size:14px;
@@ -238,7 +240,7 @@ footer {
     padding:0;
   }
 
-  header ul, header p.view {
+  header ul, header {
     position:static;
   }
 
