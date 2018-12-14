@@ -204,7 +204,7 @@ footer {
 
 @media print, screen and (max-width: 960px) {
 
-  div.wrapper {
+  .wrapper {
     width:auto;
     margin:0;
   }
@@ -258,7 +258,8 @@ footer {
 
 @media print, screen and (max-width: 480px) {
   body {
-    padding:15px;
+    padding:1%;
+    width:100%;
   }
 
   header ul {
