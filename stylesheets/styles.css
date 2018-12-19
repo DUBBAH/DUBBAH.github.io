@@ -148,7 +148,7 @@ header li.Downloads:last-child a {
   border-radius:0 5px 5px 0;
 }
 
-header ul a {
+header ul.Downloads a {
   line-height:1;
   font-size:11px;
   color:#999;
@@ -158,7 +158,7 @@ header ul a {
   height:34px;
 }
 
-header ul a:hover {
+header ul a.Downloads:hover {
   color:#999;
 }
 
@@ -216,7 +216,7 @@ footer {
   }
 
   header {
-    padding-right:320px;
+    padding-right:120px;
   }
 
   section {
@@ -266,7 +266,7 @@ footer {
     width:99%;
   }
 
-  header li, header ul li + li + li {
+  header ul li.Downloads + li.Downloads + li.Downloads {
     width:33%;
   }
 }
