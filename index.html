@@ -5,13 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=0.75">
 
+    <script src="javascripts/plotly-latest.min.js"></script>
     <title>DUBBAH Project Homepage</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
   <body
     <div class="wrapper">
@@ -114,7 +112,7 @@
             <p>
               The following case story is authentic and taken from Aalborg Municipality. In order too keep it anonymous the patient is called "Mr.Jensen".<br><br>
 
-              In 2006 was "Mr. Jensen" loaned a Induction loop.
+              In 2006 was "Mr. Jensen" loaned an Induction loop.
               In October 2014, he was granted a stronger doorbell with puzzle call.
               In November 2014, he was given an outdoor rollator and a month after that a rail for self-lifting.
               In May 2015, an indoor rollator and two months later, he gets a shower stool and a GSM emergency call, if he falls over.
@@ -122,12 +120,13 @@
 
               Looking at Mr.Jensen's self-reliance it is clear that it has a negative development.
               The rate of which assistive technologies are granted is increasing from November and onwards.
-              A timeline of this might look like this
+              A timeline of this might look like this:
+
               <div class = "crop">
                 <img src="images/AssitiveTechnologyDevelopmentCONV.png" alt = "Timeline for conventional development of Assistive Technology needed" >
               </div>
 
-              If a system could detect an unnormal development in loans of assitive technology or suggest a preventive rehabilition program there is a chance that Mr.Jensen would not need that much help.
+              If a system could detect an unnormal development in loans of assitive technology or suggest a preventive rehabilitation program there is a chance that Mr.Jensen would not need that much help.
               This would which would yield an alternative timeline:
               <div class = "crop">
                 <img src="images/AssitiveTechnologyDevelopmentNEW.png" alt = "Timeline for new development of Assistive Technology needed" >
@@ -171,15 +170,23 @@
             Evaluated by self-reliance the mean increase from physical exercise was 14%.
             Comparing this outcome based on the usage of assistive technologies,
             citizens using rollators achieved the highest increase at 29% and citizens using tuning system the lowest at 13 % as seen in the bar chart below.
-            <div class="crop"><img src="images/DegreeOfSelfReliance.png"></div>
+            <!--<div class="crop"><img src="images/DegreeOfSelfReliance.png"></div>-->
+
+            <div class = "crop" id="graph" style: "width:90%"><!-- Plotly chart will be drawn inside this DIV --></div>
+          
+            <script src="javascripts/plots.js"></script>
+
           </p>
         </h3>
 
-        <h3>Preliminary Results </h3>
+        <h3 id = "demo">Software demonstration </h3>
+        <p>
+          This section is under construction and is currently only used as a lofi mock-up.
+        </p>
         <select>
           <option value="one">Male, 48 years, ...</option>
           <option value="two">Female, 43 years, ...</option>
-          </select>
+        </select> <br><br>
 
 
       </section>
