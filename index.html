@@ -165,17 +165,69 @@
 
         <h3>Preliminary Results </h3>
           <p>
-            Evaluated by self-reliance the mean increase from physical exercise was 14%.
-            Comparing this outcome based on the usage of assistive technologies,
+            In the data collection phase some preliminary experiments were conducted. It was identified that evaluated by self-reliance the mean increase from physical exercise was 14% when adjusting for sickness.
+            More interestingly differences in the outcome based on assistive technologies were found much in compliance with the study from Fredericia Municipality. The results showed that
             citizens using rollators achieved the highest increase at 29% and citizens using tuning system the lowest at 13 % as seen in the bar chart below.
             <!--<div class="crop"><img src="images/DegreeOfSelfReliance.png"></div>-->
 
-            <div class = "crop" id="graph" style: "width:90%"><!-- Plotly chart will be drawn inside this DIV --></div>
-            <script type="text/javascript" src="plots/PreliminaryResults.json"></script>
+            <!--<div class = "crop" id="graph" style: "width:40%"> Plotly chart will be drawn inside this DIV -->
+            <!--
+            <script type="text/javascript" src="jsonplots/PreliminaryResults.json"></script>
             <script src="javascripts/plots.js"></script>
-
+            -->
+            <div class = "crop" id="graph">
+            <img src="images/PreliminaryResults.png" alt = "Self reliance based on Assistive Technologies" >
+            </div>
           </p>
 
+          <h3>The Database for Assistive Technologies in Aalborg Municipality </h3>
+              To yield a brief overview of the database is here a description of the dataset.
+              The dataset consists of 8 columns as seen below:<br><br>
+              <div class = "crop">
+                <img src="images/hu.png" alt = "Example of the database of assistive technologies" >
+              </div> <br>
+              <ul>
+                <li>BorgerID is an anonymized unique identifier.
+                <li>HJAELPEMIDDELHMINUMMER is an unique identier for the device.
+                <li>HJAELPEMIDDELHMINAVN is the name of the device.
+                <li>HJAELPEMIDDELISOKLASSE is the ISO type class of the device.
+                <li>HJAELPEMIDDELSERIENUMMER is the serial number identifying each device.
+                <li>LOVPARAGRAFNAVN is the justification of the loan.
+                <li>UDLEVERINGSDATO is the date of lending.
+                <li>INDLEVERINGSDATO is the date of return.
+                <li>Pris is the price of the device.
+              </ul>
+
+
+              In total 662308 devices were registered in Aalborg Municipality from 1977-06-24 to 2018-11-15 (the day of data extraction).
+              After cleaning the data for devices with the HMI number 899,999 equivalent to the name "Misc / deleted" the dataset consisted of 656775 registrations.
+              A total of 43153 citizens, 9609  HMI numbers and 604 ISO classes were registered.
+              As every other field of technology the assortment assistive devices changes every year, thus the following descriptives are based on the 417352 registrations after 2005.
+
+              <br><br>The top 15 ISO classes based on occurence can be seen below:
+              <div class = "crop" id="graph"> <!-- Plotly chart will be drawn inside this DIV -->
+                  <img src ="images/HJAELPEMIDDELISOKLASSECountsOfTheMostCommonAT.png", alt = "ISO classes and their duration sorted">
+              </div> The most frequent device is a Topro rollator with 33104 and the follow up is a shower stool with 22009 occurences.
+
+              <br><br>When ever a device is returned a duration can be calculated.
+              The mean duration and error for 15 ISO classes above can be seen in the graph below:
+              <div class = "crop" id="graph"> <!-- Plotly chart will be drawn inside this DIV -->
+                  <img src ="images/HJAELPEMIDDELISOKLASSEDurationTheLongestAT.png", alt = "ISO classes and their duration sorted">
+              </div>
+              Here we see the top scores are again the Topro rollator and the shower stool with 707 and 663 days respectively.
+              Notice the duration variates a alot within all the classes.
+
+              <br><br> The mean duration for ALL ISO clases can be seen below
+              <div class = "crop" id="graph"> <!-- Plotly chart will be drawn inside this DIV -->
+                  <img src ="images/HJAELPEMIDDELISOKLASSEDurationDistributionAll.png", alt = "ISO classes and their duration sorted">
+              </div>
+              Notice the big difference between the longest and the shortest duration and that most of the observation lays between 0-2000 days.
+
+
+              <br><br> Year by year distribution of registrations and law.
+              <div class = "crop" > <!-- Plotly chart will be drawn inside this DIV -->
+                  <img src ="images/HJAELPEMIDDELStatisticsBy12Months.png", alt = "Statistics of law registrations based on year">
+              </div>
 
 
       </section>
