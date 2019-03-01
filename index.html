@@ -202,31 +202,38 @@
               In total 662308 devices were registered in Aalborg Municipality from 1977-06-24 to 2018-11-15 (the day of data extraction).
               After cleaning the data for devices with the HMI number 899,999 equivalent to the name "Misc / deleted" the dataset consisted of 656775 registrations.
               A total of 43153 citizens, 9609  HMI numbers and 604 ISO classes were registered.
-              As every other field of technology the assortment assistive devices changes every year, thus the following descriptives are based on the 417352 registrations after 2005.
+              As every other field of technology the assortment assistive devices changes every year, thus we filtered our everything before 2005 making the following descriptives based on 417352 registrations from 2005-2018.
 
-              <br><br>The top 15 ISO classes based on occurence can be seen below:
+              <br><br>The 15 most common ISO classes can be seen in this <a href = "#mostcommonat" > graph</a> :
               <div class = "crop" id="graph"> <!-- Plotly chart will be drawn inside this DIV -->
-                  <img src ="images/HJAELPEMIDDELISOKLASSECountsOfTheMostCommonAT.png", alt = "ISO classes and their duration sorted">
-              </div> The most frequent device is a Topro rollator with 33104 and the follow up is a shower stool with 22009 occurences.
+                  <img src ="images/HJAELPEMIDDELISOKLASSECountsOfTheMostCommonAT.png", alt = "ISO classes and their duration sorted", id = "mostcommonat">
+              </div> From this it is clear that the most common device is a Topro rollator with 33104 and the follow up is a shower stool with 22009 occurences.
 
-              <br><br>When ever a device is returned a duration can be calculated.
-              The mean duration and error for 15 ISO classes above can be seen in the graph below:
+              <br><br> From the 417352 a total of 79837 did not have any return date. The number of times a device was not returned can be seen for every ISO class can be seen <a href = "#noreturn" > graph</a> below:
               <div class = "crop" id="graph"> <!-- Plotly chart will be drawn inside this DIV -->
-                  <img src ="images/HJAELPEMIDDELISOKLASSEDurationTheLongestAT.png", alt = "ISO classes and their duration sorted">
+                  <img src ="images/HJAELPEMIDDELISOKLASSECountsOfNoReturns.png", alt = "ISO classes and their duration sorted", id = "noreturn">
+              </div>
+
+              Whenever a device is returned a duration can be calculated. The mean duration and error for the 15 most common ISO classes can be seen in the <a href = "#durationat" > graph</a> below
+              <div class = "crop" id="graph"> <!-- Plotly chart will be drawn inside this DIV -->
+                  <img src ="images/HJAELPEMIDDELISOKLASSEDurationTheLongestAT.png", alt = "ISO classes and their duration sorted", id = "durationat">
               </div>
               Here we see the top scores are again the Topro rollator and the shower stool with 707 and 663 days respectively.
-              Notice the duration variates a alot within all the classes.
+              Notice the duration variates a alot.
 
-              <br><br> The mean duration for ALL ISO clases can be seen below
+              <br><br> The distribution of time across every ISO clas can be seen in the following <a href = "#durationdistributionat"> graph</a> .
               <div class = "crop" id="graph"> <!-- Plotly chart will be drawn inside this DIV -->
-                  <img src ="images/HJAELPEMIDDELISOKLASSEDurationDistributionAll.png", alt = "ISO classes and their duration sorted">
+                  <img src ="images/HJAELPEMIDDELISOKLASSEDurationDistributionAll.png", alt = "ISO classes and their duration sorted", id = "durationdistributionat">
               </div>
-              Notice the big difference between the longest and the shortest duration and that most of the observation lays between 0-2000 days.
+              Notice the big difference between the longest and the shortest duration and that most ISO classes has a duration between 0-2000 days.
 
 
-              <br><br> Year by year distribution of registrations and law.
-              <div class = "crop" > <!-- Plotly chart will be drawn inside this DIV -->
-                  <img src ="images/HJAELPEMIDDELStatisticsBy12Months.png", alt = "Statistics of law registrations based on year">
+              <br><br> Sorting the registrations by year yields the following <a href="#byyeardistribution">distribution</a
+              <div class = "crop" id="graphlandscape" > <!-- Plotly chart will be drawn inside this DIV -->
+                  <img src ="images/HJAELPEMIDDELStatisticsBy12Months.png", alt = "Statistics of law registrations based on year", id="byyeardistribution">
+              </div>
+              <div class = "crop" id="graph""> <!-- Plotly chart will be drawn inside this DIV -->
+                  <img src ="images/HJAELPEMIDDELPieChartBy12Months.png", alt = "Statistics of law registrations based on year">
               </div>
 
 
