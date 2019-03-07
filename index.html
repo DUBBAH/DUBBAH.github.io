@@ -24,6 +24,7 @@
           <li class="Intro"> <a href ="#whatisdubbah" > What is DUBBAH </a> </li>
           <li class="Intro"> <a href = "#theprojectbackground" > The project background </a> </li>
           <li class="Intro"> <a href = "#mediaandpublicity" > Media and publicity </a> </li>
+          <li class="Intro"> <a href = "#DataExplanation" > The data</a> </li>
           <li class="Intro"> <a href = "#TheResultsofTheProject" > The results of the project</a></li>
           <li class="Intro">  The software source code </li>
         </ul>
@@ -154,11 +155,74 @@
           The 6th of December 2018 municipal health published an <a href = "https://kommunalsundhed.dk/kunstig-intelligens-skal-loefte-kommunal-service/">article</a> about the the possible benefits of the project. You will need to set up a free account to gain access, if you do not all ready have one.
 
       </section>
+      <section>
+        <h1 id ="DataExplanation"> Data</h1>
+        The data providers for this project are Aalborg Municipality and DigiRehab. To yield a brief overview of the databases is here a description of the datasets.
 
+          <h3>The Database for Assistive Technologies in Aalborg Municipality </h3>
+          This dataset consists of 8 columns as seen below:<br><br>
+
+            <div class = "crop">
+              <img src="images/hu.png" alt = "Example of the database of assistive technologies" >
+            </div> <br>
+            <ul>
+              <li>BorgerID is an anonymized unique identifier.
+              <li>HJAELPEMIDDELHMINUMMER is an unique identier for the device.
+              <li>HJAELPEMIDDELHMINAVN is the name of the device.
+              <li>HJAELPEMIDDELISOKLASSE is the ISO type class of the device.
+              <li>HJAELPEMIDDELSERIENUMMER is the serial number identifying each device.
+              <li>LOVPARAGRAFNAVN is the justification of the loan.
+              <li>UDLEVERINGSDATO is the date of lending.
+              <li>INDLEVERINGSDATO is the date of return.
+              <li>Pris is the price of the device.
+            </ul>
+
+        In total 662308 devices were registered in Aalborg Municipality from 1977-06-24 to 2018-11-15 (the day of data extraction).
+        After cleaning the data for devices with the HMI number 899,999 equivalent to the name "Misc / deleted" the dataset consisted of 656775 registrations.
+        A total of 43153 citizens, 9609  HMI numbers and 604 ISO classes were registered.
+
+
+            <h3>The Database for citizens in Aalborg Municipality enrolled in DigiRehab </h3>
+            Digirehab provided 4 sub-databases for screening values, status values, training done and traning cancelled as illustrated in the 4 charts below:
+
+              <br><br>Screening values, are the records of screenings performed on the citizen and the corresponding exercises:
+              <img src="images/sv.png" alt = "Example of the Screening values database from DigiRehab" >
+
+              <br><br>Status values, are the records of the state of a citizen's training program, e.g. active, paused, or terminated. This is automatically triggered by DigiRehab's system:<br>
+              <img src="images/sc.png" alt = "Example of the status values database from DigiRehab", width="55%">
+
+              <br><br>Training cancelled, are the records of training sessions that were not completed: <br>
+              <img src="images/tc.png" alt = "Example of the Training Cancelled database from DigiRehab", width="55%">
+
+              <br><br>Training done, the records of training sessions that were performed:<br>
+              <img src="images/td.png" alt = "Example of the Training Done database from DigiRehab", width="55%" >
+              <br><br>
+              <ul>
+                <li>PatientID is an unqiue identifier used only by DigiRehab.
+                <li>borgerID is the cross-reference key.
+                <li>Gender is the sex of the citizen
+                <li>Birthyear is the year which the citizen was collaboration
+                <li>RatingDate / Changedate / Screeningdate is the date for any updates to the table
+                <li>Status is one of the following values: Active, Pause, Re-activated, Significant progress, Monitor, Maintenance, Terminated, Has died, Opted out, Should be screened
+                <li>Behovforhjælpscore
+                <li>Behovforhjælpreason is either an empty in case the score goes down, or the score goes
+                  up and the physician presses cancel.
+                  Or one of the following categories to be chosen by the user on a pop-up menu when the score goes up: Sygdom, Fald/uheld, Gerelt ustabil, Manglende motivation, Medicin, Andet, Ingen forklaring
+                <li>fyiskformåenscore a number from 1 to 100, which computed as a function of the list of the exercises, and represents the current physical shape of the patient.
+                <li>fyiskformåenreason is similar to the Behovforhjælpreson where up and down are switched.
+                <li>ExerciseContentID1-9 is a list of at most 10 exercises planned to be performed.
+                <li>Ratingscore a number from 1 to 6 (1 is reserved for cancellations).
+                <li>Ratingcomment comments from the therapist.
+
+              </ul>
+              In total 648 different citizens were enrolled in the DigiRehab program from 2015-01-10 to 2019-01-14 (the day of data extraction).
+              After cleaning the data for lines with no date or IDs the dataset consisted of a 618 different citizens. These 618 citizens had a total 9440 recorded loans of assitive technoligies.
+
+      </section>
 
       <section>
 
-        <h1 id ="TheResultsofTheProject"> The Results of The Project </h1>
+        <h1 id ="TheResultsofTheProject"> The Results of the Project </h1>
           <p>
             This section will be updated continously as new results are discovered.
           </p>
@@ -181,27 +245,7 @@
           </p>
 
           <h3>The Database for Assistive Technologies in Aalborg Municipality </h3>
-              To yield a brief overview of the database is here a description of the dataset.
-              The dataset consists of 8 columns as seen below:<br><br>
-              <div class = "crop">
-                <img src="images/hu.png" alt = "Example of the database of assistive technologies" >
-              </div> <br>
-              <ul>
-                <li>BorgerID is an anonymized unique identifier.
-                <li>HJAELPEMIDDELHMINUMMER is an unique identier for the device.
-                <li>HJAELPEMIDDELHMINAVN is the name of the device.
-                <li>HJAELPEMIDDELISOKLASSE is the ISO type class of the device.
-                <li>HJAELPEMIDDELSERIENUMMER is the serial number identifying each device.
-                <li>LOVPARAGRAFNAVN is the justification of the loan.
-                <li>UDLEVERINGSDATO is the date of lending.
-                <li>INDLEVERINGSDATO is the date of return.
-                <li>Pris is the price of the device.
-              </ul>
 
-
-              In total 662308 devices were registered in Aalborg Municipality from 1977-06-24 to 2018-11-15 (the day of data extraction).
-              After cleaning the data for devices with the HMI number 899,999 equivalent to the name "Misc / deleted" the dataset consisted of 656775 registrations.
-              A total of 43153 citizens, 9609  HMI numbers and 604 ISO classes were registered.
               As every other field of technology the assortment assistive devices changes every year, thus we filtered our everything before 2005 making the following descriptives based on 417352 registrations from 2005-2018.
 
               <br><br>The 15 most common ISO classes can be seen in this <a href = "#mostcommonat" > graph</a> :
@@ -214,33 +258,47 @@
                   <img src ="images/HJAELPEMIDDELISOKLASSECountsOfNoReturns.png", alt = "ISO classes and their duration sorted", id = "noreturn">
               </div>
 
+
               Whenever a device is returned a duration can be calculated. The mean duration and error for the 15 most common ISO classes can be seen in the <a href = "#durationat" > graph</a> below
               <div class = "crop" id="graph"> <!-- Plotly chart will be drawn inside this DIV -->
-                  <img src ="images/HJAELPEMIDDELISOKLASSEDurationTheLongestAT.png", alt = "ISO classes and their duration sorted", id = "durationat">
+                  <img src ="images/HJAELPEMIDDELISOKLASSEDurationTheMostCommonAT.png", alt = "ISO classes and their duration sorted", id = "durationat">
               </div>
-              Here we see the top scores are again the Topro rollator and the shower stool with 707 and 663 days respectively.
-              Notice the duration variates a alot.
+              Here we see the top scores are again the Topro rollator and the shower stool with a mean duration of 707 and 663 days respectively.
+              Notice the duration variates a alot. For this reason a plot of the fractiles might yield additional information. Looking at the <a href = "#durationat" > fractiles</a>
+              it is seen that the much of the variation is coursed by 25% of the citizens. It is also seen that the median is much lower than mean values in most cases.
 
-              <br><br> The distribution of time across every ISO clas can be seen in the following <a href = "#durationdistributionat"> graph</a> .
+
+               <div class = "crop" id="graphwide"> <!-- Plotly chart will be drawn inside this DIV -->
+                   <img src ="images/HJAELPEMIDDELISOKLASSEDurationFractilesMostCommonAt.png", alt = "ISO classes and their duration sorted", id = "durationhistogram">
+               </div>
+
+              <br>To see the distribution of duration within each ISO class a histogram of the this for each ISO class is plotted <a href = "#durationhistogram">below</a>:
+              <div class = "crop" id="graphwide"> <!-- Plotly chart will be drawn inside this DIV -->
+                  <img src ="images/HJAELPEMIDDELISOKLASSEDurationHistogramMatrix.png", alt = "ISO classes and their duration sorted", id = "durationhistogram">
+              </div>
+              What can be seen from this plot is that generally a device is used for 500 days and then returned. The probability using any of the Top 15 devices more than 3 years is low.
+              This plot also yields an explanation for the variation seen in the durations. This also justifies looking a
+
+              <br><br> The mean distribution of time across every ISO class can be seen in the following <a href = "#durationdistributionat"> graph</a> .
               <div class = "crop" id="graph"> <!-- Plotly chart will be drawn inside this DIV -->
                   <img src ="images/HJAELPEMIDDELISOKLASSEDurationDistributionAll.png", alt = "ISO classes and their duration sorted", id = "durationdistributionat">
               </div>
               Notice the big difference between the longest and the shortest duration and that most ISO classes has a duration between 0-2000 days.
 
-
-              <br><br> Sorting the registrations by year yields the following <a href="#byyeardistribution">distribution</a
-              <div class = "crop" id="graphlandscape" > <!-- Plotly chart will be drawn inside this DIV -->
+              <br><br> When looking at which paragraphs were used every year we see from that §97 was the most common in 2005 and 2006 and $112 otherwise.
+              In 2005-2014 a great amount of the loans were associated with a paragraph, but this changed in the years after. <a href="#byyeardistribution">distribution</a>.
+              <div class = "crop" id="graphwide" > <!-- Plotly chart will be drawn inside this DIV -->
                   <img src ="images/HJAELPEMIDDELStatisticsBy12Months.png", alt = "Statistics of law registrations based on year", id="byyeardistribution">
               </div>
-              <div class = "crop" id="graph""> <!-- Plotly chart will be drawn inside this DIV -->
-                  <img src ="images/HJAELPEMIDDELPieChartBy12Months.png", alt = "Statistics of law registrations based on year">
+              <div class = "crop" id="graphwide" > <!-- Plotly chart will be drawn inside this DIV -->
+                  <img src ="images/HJAELPEMIDDELPieChartBy12Months.png", alt = "Statistics of law registrations based on year", id="byyeardistribution">
               </div>
 
-
+              Normally only 4 different paragraphs are used and the reason for this distribution is that in some case the ISO class numbers were recorded in the Paragraph field mistakenly.
+              For instance in 2018 59 different paragraphs were used.
       </section>
 
     </div>
-    <script src="javascripts/scale.fix.js"></script>
     </body>
 
   <footer>
